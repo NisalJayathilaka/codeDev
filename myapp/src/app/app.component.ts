@@ -16,4 +16,8 @@ export class AppComponent {
         this.payment.push(f.value);
         console.log(this.payment); 
     }
+
+    deleteValue(){
+      this.payment.pop();
+    }
 }
