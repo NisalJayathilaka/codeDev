@@ -1,4 +1,4 @@
-<form #f="ngForm" (ngSubmit)="submitValues(f)">
+<form #addForm="ngForm" (ngSubmit)="submitValues(addForm)">
   <div class="form-group">
     <label for="email" >Name:</label>
     <input type="text" required ngModel  name="name" class="form-control" id="name" />
@@ -9,13 +9,13 @@
   </div>
   <div class="form-group">
     <label for="pwd">Phone:</label>
-    <input type="text" required ngModel name="phone" class="form-control" id="email" />
+    <input type="number" required ngModel name="phone" class="form-control" id="email" />
   </div>
   <div class="form-group">
     <label for="pwd">Amount:</label>
     <input type="number" required ngModel name="amount" class="form-control" id="amount" />
   </div>
-  <button type="submit" class="btn btn-default">Submit</button>
+  <button [disabled]="addForm.invalid" type="submit" class="btn btn-default">Submit</button>
 </form>
 
 <div class="container">

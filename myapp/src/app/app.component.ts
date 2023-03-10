@@ -10,11 +10,10 @@ import * as _ from 'underscore';
 export class AppComponent {
   payment: Payment[] = [];
 
-  submitValues(f: any): void {
-    this.payment.push(f.value);
+  submitValues(addForm: any): void {
+    this.payment.push(addForm.value);
    this.payment = _.sortBy(this.payment, 'name');
   }
-  
 
   rowSelected(args:any){
     this.payment.splice(args, 1);    
