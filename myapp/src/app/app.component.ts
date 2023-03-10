@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Pyament } from './payment';
+import { Payment } from './payment';
 
 @Component({
   selector: 'app-root',
@@ -9,13 +9,11 @@ import { Pyament } from './payment';
 export class AppComponent {
     
   
-   payment:Pyament[] =[];
-    aray:any = [];
-
+  payment:Payment[] =[];
 
     submitValues(f:any):void{
         console.log('asasas');
         this.payment.push(f.value);
-        
+        console.log(this.payment); 
     }
 }
