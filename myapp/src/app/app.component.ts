@@ -12,7 +12,8 @@ export class AppComponent {
 
   submitValues(addForm: any): void {
     this.payment.push(addForm.value);
-   this.payment = _.sortBy(this.payment, 'name');
+    this.payment = _.sortBy(this.payment, 'name');
+    addForm.reset();
   }
 
   rowSelected(args:any){
