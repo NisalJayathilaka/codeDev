@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "bootstrap": "^5.2.3"
+    "@types/underscore": "^1.11.4",
+    "bootstrap": "^5.2.3",
+    "underscore": "^1.13.6"
   }
 }
