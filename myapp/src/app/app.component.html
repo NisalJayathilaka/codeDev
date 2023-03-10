@@ -31,12 +31,12 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let data of sortedArray">
+      <tr *ngFor="let data of payment" #ival>
         <td>{{data.name}}</td>
         <td>{{data.email}}</td>
         <td>{{data.phone}}</td>
         <td>{{data.amount}}</td>
-        <td><button type="button" class="btn btn-danger" (click)="deleteValue()">Delete</button></td>
+        <td><button type="button" class="btn btn-danger" (click)='rowSelected(ival.sectionRowIndex)'>Delete</button></td>
       </tr>
     </tbody>
   </table>
